@@ -11,7 +11,7 @@ On this project we have implemented a PID controller in C++ to maneuver the vehi
 The implementation of the algorithm is quite straight forward. Every time we receive the error we stored on
 the variables and calculate the new value. We use two PID controllers one for the steering and one for the throttle
 control, each with its own initial constants. Given that on practice the integral error can get saturated we *clamped 
-the saturation* to a max value, which provides us with smoother correction when the car started oscillating to much.  
+the saturation* to a max value, which provides us with smoother correction when the car started oscillating too much.  
 
 The [Video](https://youtu.be/Tuj7dfj4P0c) result shows how the car goes around the track.
 
@@ -40,7 +40,7 @@ The parameters correspond as follow for throttle.
 - **Clone this repo**
 - **Make a build directory:** mkdir build && cd build
 - **Compile:** cmake .. && make
-- - **Run it:** ./pid
+- **Run it:** ./pid
 
 ## Dependencies
 
