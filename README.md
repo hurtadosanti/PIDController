@@ -1,40 +1,11 @@
 # PID Controller
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-Proportional–integral–derivative(PID) controller is commonly used algorithm on control loops. The controller takes a
-signal input and computes the desired actuator output. The PID includes into the feedback loop the present error(P), the 
-memory o the past error(I) and the future (D) to reduce overshooting, and base on this values applies a correction.
-On this project we have implemented a PID controller in C++ to maneuver the vehicle around the simulator track. 
+A proportional–integral–derivative **(PID)** controller is a commonly used algorithm on control loops. On this **[project](https://advt3.com/posts/pid_controller)** we have implemented a PID controller in C++ to maneuver the vehicle around the simulator track.   
 
+![drone](/img/florin-kozma--K2rf6hAB1s-unsplash.jpg) 
 
-## Implementation
-The implementation of the algorithm is quite straight forward. Every time we receive the error we stored on
-the variables and calculate the new value. We use two PID controllers one for the steering and one for the throttle
-control, each with its own initial constants. Given that on practice the integral error can get saturated we *clamped 
-the saturation* to a max value, which provides us with smoother correction when the car started oscillating too much.  
-
-The [Video](https://youtu.be/Tuj7dfj4P0c) result shows how the car goes around the track.
-
-## Parameter Tuning
-Even thought there are many algorithms that can do the parameter tuning we choose to it manually to understand them 
-better. Tuning each parameter at a time by hand helps understanding how it works each of one of them. Even though the
-throttle control uses PID, tuning the parameters is not as evident as the steering control.
-
-The parameters correspond as follow for steering.
-
-- P constant value was setup to *0.05*. The value define how much correction is done. If the value is set to say 1,
-  the car will continuously correct the direction making it oscillate heavily on a straight line.
-  
-- I constant value was set *0.001* with a max value of *200*. This value was set to 0 initially, and when the 
-  other two values **P and D** where set, with put a very small value that helps the car driver a bit smoother.
-  
-- D constant value was set to *3*. Finally the D value was set high since it helps turning on the curves harder.
-  
-The parameters correspond as follow for throttle.
-
-- P constant value was setup to *0.09*
-- I constant value was set *0.0001* with a max value of *500*
-- D constant value was set to *0.5*
+*Photo by [Florin Kozma](https://unsplash.com/@florinkozma?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/controller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)*
 
 ## Basic Build Instructions
 - **Clone this repo**
@@ -81,3 +52,5 @@ https://github.com/udacity/CarND-Controls-PID
 https://github.com/udacity/self-driving-car-sim/releases
 
 https://review.udacity.com/#!/rubrics/1972/view
+
+https://advt3.com/posts/pid_controller
