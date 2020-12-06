@@ -3,7 +3,7 @@
 
 A proportional–integral–derivative **(PID)** controller is a commonly used algorithm on control loops. On this **[project](https://advt3.com/posts/pid_controller)** we have implemented a PID controller in C++ to maneuver the vehicle around the simulator track.   
 
-![drone](/img/florin-kozma--K2rf6hAB1s-unsplash.jpg) 
+![drone](https://advt3.com/img/florin-kozma--K2rf6hAB1s-unsplash.jpg) 
 
 *Photo by [Florin Kozma](https://unsplash.com/@florinkozma?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/controller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)*
 
